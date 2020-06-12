@@ -2,8 +2,8 @@ package com.masachi.impl;
 
 import com.masachi.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.EmptyResultDataAccessException;
-import org.springframework.jdbc.core.JdbcTemplate;
+//import org.springframework.dao.EmptyResultDataAccessException;
+//import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
 /**
@@ -11,18 +11,19 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UserServiceImpl implements UserService{
-    @Autowired
-    private JdbcTemplate jdbcTemplate;
+//    @Autowired
+//    private JdbcTemplate jdbcTemplate;
 
     @Override
     public String getCurrentUser(String username) {
-        String sql = "select password from user where username = " + username;
-
-        try{
-            return jdbcTemplate.queryForObject(sql, String.class);
-        }
-        catch (EmptyResultDataAccessException e){
-            return null;
-        }
+//        String sql = "select password from user where username = " + username;
+//
+//        try{
+//            return jdbcTemplate.queryForObject(sql, String.class);
+//        }
+//        catch (EmptyResultDataAccessException e){
+//            return null;
+//        }
+        return null;
     }
 }
